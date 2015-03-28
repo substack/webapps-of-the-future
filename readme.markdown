@@ -2,11 +2,19 @@
 
 Christchurch, Aotearoa
 
+James Halliday
+http://substack.net
+
+Hobbyist Programmer
+
 ---
 
-The future is already here, it's just not evenly distributed.
+```
+The future is already here,
+it's just not evenly distributed.
 
 -- William Gibson
+```
 
 ---
 # world trends
@@ -53,15 +61,17 @@ assembly of his apt's money-gulping door.
 * fewer doors
 
 ---
-# webapps are going to get really huge
+# what the future needs
 
-tens, hundreds of megabytes of javascript!
+* more screwdrivers
+* fewer doors
+* and gigabytes of of javascript
 
 ---
 
-Scaling rich immersive applications over lousy connections:
+Disk is cheap. Network is expensive.
 
-cache everything forever!
+Cache everything forever!
 
 ---
 # application versioning
@@ -76,6 +86,15 @@ can confirm there is no silent install happening... most likely, the users
 accepted the offer during the install."
 
 ---
+# what if!
+
+What if users could veto javascript releases from websites?
+
+What if users controlled the machinery for their own content?
+
+What if cryptographic signatures replaced user accounts?
+
+---
 # appcache manifesto
 
 brick your website!
@@ -88,7 +107,7 @@ Opt-in to updates.
 # demo: hyperboot
 
 ---
-# authentication
+# distributed offline authentication
 
 Single sign-on is highly centralized.
 
@@ -156,51 +175,53 @@ Y  ...
 ```
 
 ---
-# kd tree
-
-proximity queries: which nodes are nearest?
-
----
 # B trees
 
-really good for block-based disk or network IO
-
-Just store B-many elements per node.
+```
+        [7] 3 11
+       /     \ 
+     [4] 5 1  [9] 10 8
+    /   \ 
+ [2] 0 3 [6] 5
+```
 
 ---
 # spatial database on a plane: mddf
 
-KD B tree
+KD + B tree
 
 with data attachments
 
 ---
+
+```
+[ ptlen ]
+pt0: [ coord0, coord1... coordN ] [ offset0 ]
+pt1: [ coord0, coord1... coordN ] [ offset1 ]
+pt2: [ coord0, coord1... coordN ] [ offset2 ]
+...
+ptM: [ coord0, coord1... coordN ] [ offsetM ]
+
+[... unallocated space ...]
+
+dataX: [ DATA, length ]
+...
+data2: [ DATA, length ]
+data1: [ DATA, length ]
+data0: [ DATA, length ]
+[ datalen ]
+```
+
+---
 # demo: mddf
 
-
 ---
-# content-addressable data
+# demo: content-addressable data
 
-the address is the hash of the content
-
----
-# merkle DAG
-
-like git!
-
-A -> B -> C -> D
-
-* trivial data replication
-
----
-# demo: content-addressable-blob-store
-
-Let's build a merkle DAG.
+key = hash(value)
 
 ---
 # demo: forkdb
-
-Let's use a merkle DAG that already exists!
 
 ---
 # demo: forkdb in the browser
@@ -211,69 +232,6 @@ and now, forkdb in the browser!
 # demo: shipboard
 
 ---
-# the future of webapps
-
-Frontend development requires
-all the same tricks as backend development now,
-and more!
-
-With npm+browserify we can reuse the backend code!
-
----
-# app stores
-
-what if app-store style delivery
-were built on merkle DAGs, asymmetric crypto,
-and secure feeds?
-
----
-# web sites
-
-What if users could veto javascript releases from websites?
-
-What if users controlled the machinery for their own content?
-
-What if cryptographic signatures replaced user accounts?
-
----
-# the future of services
-
-everything charges you money
-
-your door charges you five cents to open
-
-all your movements are being tracked by governments
-and marketers
-
----
-# multidimensional databases
-
-
----
-# economics
-
-one way of looking at money:
-
-it's a proxy for human work, attention, and resources
-
----
-# economics of the future
-
-* disk
-* network
-* cpu
-
----
-# the william gibson future
-
-```
-The future is already here,
-it's just not evenly distributed.
-
--- William Gibson
-```
-
----
 # conway's law
 
 Technology is an artifact of the
@@ -282,44 +240,27 @@ social structure and circumstance that produced it.
 ---
 # conway's law examples
 
-java people who want java in the frontend in huge teams -> Angular
+java programmers built Angular
 
-rails people who want rails for the frontend -> Ember
-
----
-# what kinds of social shifts are we likely to see?
-
-the jetsons, same as the flintstones
+rails programmers built Ember
 
 ---
-# what we're going to need
+# conway's law examples
 
-* social coordination
-* data replication
-* distributed common infrastructure
+java programmers built Angular
 
----
-# DHT
+rails programmers built Ember
 
-* bittorrent / webtorrent
-* ipfs
-
----
-# the future
-
-* peer to peer (webrtc)
-* replication
-* offline
-
----
-# tools
-
-fully collaborative tools
-
-tools for building real things
+geographically distributed node.js hackers
+build distributed peer to peer modules
 
 ---
 # the future!
 
-Apps are 
+* users will call the shots!
+* secure data
+* auditable, social application delivery
+* services that nobody owns or controls
 
+---
+__END__
